@@ -1,0 +1,117 @@
+:root {
+  --Body-BackGround: #34495e;
+  --Box-Background: #191919;
+  --Box-Shadow: -8px -8px 15px 4px;
+  --Box-h1: #fff;
+  --Box-Input: #ba34db;
+}
+[data-theme='ligth'] {
+  --Body-BackGround: #0e263d;
+  --Box-Background: rgb(228, 228, 228);
+  --Box-Shadow: 8px 8px 15px 4px #ff1493;
+  --Box-h1: black;
+  --Box-Input: #ff1493;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background: var(--Body-BackGround);
+}
+
+.box {
+  width: 300px;
+  padding: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--Box-Background);
+  text-align: center;
+  box-shadow: var(--Box-Shadow);
+  border-radius: 10px;
+  transition: 0.8s;
+}
+
+.box h1 {
+  color: var(--Box-h1);
+  text-transform: uppercase;
+  font-weight: 500;
+  font-family: 'Segoe UI', sans-serif;
+  transition: 0.5s;
+}
+
+.box input.input,
+.box input.input2 {
+  border: 0;
+  background: none;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid var(--Box-Input);
+  padding: 14px 10px;
+  width: 200px;
+  outline: none;
+  color: white;
+  border-radius: 24px;
+  transition: 0.25s;
+}
+.box input.input:focus,
+.box input.input2:focus {
+  width: 280px;
+}
+.box button {
+  border: 0;
+  background: #471c83;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #471c83;
+  padding: 14px 40px;
+  outline: none;
+  color: white;
+  border-radius: 24px;
+  transition: 0.25s;
+  cursor: pointer;
+}
+
+input.switch {
+  appearance: none;
+  position: absolute;
+
+  right: 5px;
+  top: 10px;
+  width: 3.5em;
+  height: 1.5em;
+  background: rgb(48, 48, 48);
+  border-radius: 3em;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+input.switch:checked {
+  background: #471c83;
+}
+
+input.switch:after {
+  position: absolute;
+  content: '';
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 50%;
+  background: whitesmoke;
+  box-shadow: 0 0 0.25em rgba(0, 0, 0, 0.3);
+  transform: scale(0.7);
+  left: 0;
+  transition: all 0.2s ease-in-out;
+}
+input[type='checkbox'].switch:checked:after {
+  left: calc(100% - 1.5em);
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 85vh;
+  color: white;
+}
